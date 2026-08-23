@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,73 +26,90 @@
     }
 
     header {
-      padding: 80px 0 60px;
+      padding: 90px 0 70px;
       text-align: center;
     }
 
     .logo {
-      font-size: 42px;
+      font-size: 46px;
       font-weight: 700;
+      letter-spacing: 1px;
       color: #C9A86A;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
     .tagline {
-      font-size: 20px;
+      font-size: 21px;
       color: #ffffff;
-      opacity: 0.9;
+      opacity: 0.92;
     }
 
     .intro {
-      max-width: 700px;
+      max-width: 720px;
       margin: 25px auto 0;
       color: #d8dee8;
       font-size: 16px;
     }
 
     .portfolio {
-      padding: 30px 0 80px;
+      padding: 20px 0 90px;
     }
 
     .section-title {
       text-align: center;
       color: #C9A86A;
-      font-size: 30px;
-      margin-bottom: 40px;
+      font-size: 31px;
+      margin-bottom: 42px;
     }
 
     .project {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(201,168,106,0.35);
-      border-radius: 18px;
-      padding: 30px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(201, 168, 106, 0.35);
+      border-radius: 20px;
+      padding: 32px;
       margin-bottom: 30px;
+      transition: 0.25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201, 168, 106, 0.7);
+    }
+
+    .project-number {
+      color: #C9A86A;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     .project h3 {
-      color: #C9A86A;
-      font-size: 24px;
-      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 25px;
+      margin-bottom: 12px;
     }
 
     .project p {
       color: #d8dee8;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      max-width: 780px;
     }
 
     .buttons {
       display: flex;
-      gap: 15px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 12px 21px;
       border-radius: 10px;
       font-weight: 600;
-      transition: 0.2s;
+      transition: 0.2s ease;
     }
 
     .button.primary {
@@ -104,6 +120,7 @@
     .button.secondary {
       border: 1px solid #C9A86A;
       color: #C9A86A;
+      background: transparent;
     }
 
     .button:hover {
@@ -113,27 +130,36 @@
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 32px 20px;
       color: #aeb8c7;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 14px;
     }
 
     @media (max-width: 600px) {
+
       header {
-        padding: 60px 0 40px;
+        padding: 65px 0 45px;
       }
 
       .logo {
-        font-size: 34px;
+        font-size: 36px;
       }
 
       .tagline {
-        font-size: 17px;
+        font-size: 18px;
+      }
+
+      .intro {
+        font-size: 15px;
       }
 
       .project {
-        padding: 22px;
+        padding: 23px;
+      }
+
+      .project h3 {
+        font-size: 21px;
       }
 
       .buttons {
@@ -151,6 +177,7 @@
 
   <header>
     <div class="container">
+
       <div class="logo">SilkWords</div>
 
       <div class="tagline">
@@ -158,23 +185,75 @@
       </div>
 
       <p class="intro">
-        Selected writing work created for digital audiences, brands,
-        and international communication.
+        Selected writing projects created for digital audiences,
+        brands, and international communication.
       </p>
+
     </div>
   </header>
 
+
   <main class="portfolio">
+
     <div class="container">
 
-      <h2 class="section-title">Selected Work</h2>
+      <h2 class="section-title">
+        Selected Work
+      </h2>
+
+
+      <!-- PROJECT 01 -->
 
       <section class="project">
-        <h3>Project 01 — Candlestick Patterns</h3>
+
+        <div class="project-number">
+          Project 01
+        </div>
+
+        <h3>
+          HODL or Day Trading?
+        </h3>
 
         <p>
-          An educational content piece explaining candlestick patterns
-          in a clear and accessible way for beginner audiences.
+          An educational content piece comparing HODLing and day trading,
+          created to help beginner crypto audiences understand different
+          approaches to the market.
+        </p>
+
+        <div class="buttons">
+
+          <a
+            class="button primary"
+            href="hodl-or-day-trading-fa-v2.html">
+            🇮🇷 نسخه فارسی
+          </a>
+
+          <a
+            class="button secondary"
+            href="hodl-or-day-trading-en-v2.html">
+            🇬🇧 English Version
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- PROJECT 02 -->
+
+      <section class="project">
+
+        <div class="project-number">
+          Project 02
+        </div>
+
+        <h3>
+          Understanding Candlestick Patterns
+        </h3>
+
+        <p>
+          An educational article explaining candlestick patterns
+          and their role in reading price charts for beginner traders.
         </p>
 
         <div class="buttons">
@@ -192,31 +271,13 @@
           </a>
 
         </div>
-      </section>
 
-      <section class="project">
-        <h3>Project 02</h3>
-
-        <p>
-          A second selected writing project. The Persian and English
-          versions are presented separately.
-        </p>
-
-        <div class="buttons">
-
-          <a class="button primary" href="#">
-            🇮🇷 نسخه فارسی
-          </a>
-
-          <a class="button secondary" href="#">
-            🇬🇧 English Version
-          </a>
-
-        </div>
       </section>
 
     </div>
+
   </main>
+
 
   <footer>
     © 2026 SilkWords. All rights reserved.
