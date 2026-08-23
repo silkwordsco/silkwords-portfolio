@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A simple, practical guide to reading your first price chart, for crypto beginners.">
+<meta property="og:title" content="Reading Candlestick Charts for Beginners | SilkWords">
+<meta property="og:description" content="A simple, practical guide to reading your first price chart, for crypto beginners.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<title>Reading Candlestick Charts for Beginners | SilkWords</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--navy:#152238;--gold:#c79a3d;--cream:#faf7f0;--ink:#1c2230;--muted:#5b6373;--line:#e6e1d3;--soft:#f2ede0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Inter",Segoe UI,Arial,sans-serif;line-height:1.75}a{color:var(--navy);font-weight:700}
+.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #26375a}.nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;letter-spacing:.08em}.tag{font-size:12px;border:1px solid #ffffff30;padding:3px 11px;border-radius:99px}
+.hero{background:var(--navy);color:#fff}.hero-in{max-width:1180px;margin:auto;padding:64px 22px 52px}.eyebrow{color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.04em}h1{font-size:clamp(34px,5vw,54px);line-height:1.25;margin:12px 0 16px}.lead{font-size:18px;color:#e5edf6;max-width:700px}.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.meta span{background:#ffffff12;border:1px solid #ffffff20;padding:5px 12px;border-radius:12px;font-size:12px}
+main{max-width:900px;margin:auto;padding:42px 14px}.article{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 35px #1522380c;overflow:hidden}.content{padding:46px clamp(20px,5vw,62px)}h2{color:var(--navy);font-size:27px;line-height:1.4;margin:54px 0 18px}h2:first-child{margin-top:0}h3{color:var(--navy);line-height:1.5}p{margin:0 0 17px}.callout{background:var(--soft);border-left:4px solid var(--gold);padding:18px 20px;border-radius:13px;margin:25px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}.card{position:relative;border:1px solid var(--line);border-radius:17px;padding:22px;background:#fff}.card .num{position:absolute;right:16px;top:14px;color:var(--gold);font-weight:800}.card h3{margin:0 0 9px;font-size:19px}.card p{font-size:14px}.concepts{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}.concepts li{background:#faf9f5;border:1px solid var(--line);border-radius:13px;padding:14px 16px;font-size:14px}.checklist{margin:22px 0}.check-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}.check-item:last-child{border-bottom:none}.check-num{flex:0 0 36px;height:36px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}.check-item h3{font-size:16.5px;margin:0 0 5px}.check-item p{font-size:14px;margin:0;color:var(--muted)}ol.steps{padding-left:20px}ol.steps li{margin:8px 0;background:#faf9f5;border:1px solid var(--line);padding:11px 15px;border-radius:12px}details{border-bottom:1px solid var(--line);padding:15px 0}summary{cursor:pointer;font-weight:800;color:var(--navy);list-style:none}summary::-webkit-details-marker{display:none}summary:before{content:"+";display:inline-grid;place-items:center;width:27px;height:27px;border:1px solid var(--line);border-radius:50%;margin-right:9px}details[open] summary:before{content:"−"}details p{margin:10px 0 0}.disclaimer{margin-top:30px;background:#f5f2eb;border:1px solid var(--line);border-radius:14px;padding:17px;color:#596272;font-size:12px}footer{background:var(--navy);color:#fff;padding:30px 22px}.foot{max-width:900px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center}footer small{color:#cbd5e1}.content svg{max-width:100%;height:auto;display:block;margin:28px 0}
+@media(max-width:800px){.grid,.concepts{grid-template-columns:1fr}.content{padding:31px 19px}h2{font-size:24px;margin-top:40px}main{padding:22px 9px}.article{border-radius:17px}.foot{flex-direction:column;align-items:flex-start}}
+@media(max-width:480px){.nav{padding:12px 15px}.tag{display:none}h1{font-size:32px}.lead{font-size:16px}.hero-in{padding:37px 16px 30px}.content{padding:25px 16px}.check-item{gap:11px;padding:14px 0}}
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav"><div class="brand">SILKWORDS</div><div class="tag">WEB CONTENT PORTFOLIO · 02</div></nav></header>
+<section class="hero"><div class="hero-in"><div><div class="eyebrow">Part 2 of the day-trading learning series</div><h1>Reading Candlestick Charts for Beginners</h1><p class="lead">A simple, practical guide to reading your first price chart, without memorizing dozens of patterns.</p><div class="meta"><span>Educational web article</span><span>Crypto beginners</span><span>4–6 min read</span></div></div></div></section>
+<main><article class="article"><div class="content">
+<p>One of the things that draws a lot of people into trading in the first place is that green-and-red chart. It was the same for me. From a distance, it looked beautiful and inviting. But once I got closer and actually tried to understand it, everything turned out harder than I expected; the terminology was more complicated than I'd assumed.</p><p>In part 1 of this series, we talked about choosing a path (HODL or day trading). If you chose day trading, this is your next step: learning what you're actually looking at when you look at a chart. Let's go through it together, in plain language, no hype.</p>
+<h2>What is a candlestick?</h2>
+<p>A candlestick shows the opening, highest, lowest, and closing price of an asset over a given time period. These four prices are known as <strong>OHLC</strong>: Open, High, Low, Close.</p><p>The body of the candle shows the distance between the open and close price; the wicks (the thin lines above and below the body) show the highest and lowest price reached in that period.</p><p><strong>What does the color mean?</strong> A green candle (or white) means the price went up over that period. A red candle (or black) means it went down.</p><p><strong>A simple example:</strong> say a day's price looks like this: open = 100, high = 110, low = 95, close = 105. That means the price started at 100, rose to 110, dropped to 95, and finally closed at 105.</p><p>Traders use this chart to read market direction and sentiment.</p>
+<div class="callout"><strong>OHLC at a glance</strong><br>Open · High · Low · Close: the four prices every candle shows for its time period.</div>
+<h2>The 4 patterns you actually need to know</h2><p>Most resources you'll find either give you too few patterns (not enough to work with) or dump dozens on you at once (too much to absorb when you're starting out). These four are the right place to start, because each one represents one of the market's core behaviors.</p>
+<svg viewBox="0 0 800 760" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title>Hammer vs. Hanging Man comparison, and a table of the 4 candlestick patterns</title>
+  <rect x="0" y="0" width="800" height="760" fill="#ffffff"/>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Hammer vs. Hanging Man: same shape, different meaning</text>
+  <rect x="30" y="55" width="345" height="230" rx="8" fill="#f7f9f7" stroke="#dde3dd"/>
+  <text x="202" y="80" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">Hammer, after a downtrend</text>
+  <line x1="55" y1="250" x2="350" y2="250" stroke="#cccccc" stroke-width="1"/>
+  <line x1="80"  y1="105" x2="80"  y2="150" stroke="#c62828" stroke-width="2"/>
+  <rect x="72" y="108" width="16" height="35" fill="#c62828"/>
+  <line x1="135" y1="140" x2="135" y2="185" stroke="#c62828" stroke-width="2"/>
+  <rect x="127" y="143" width="16" height="35" fill="#c62828"/>
+  <line x1="190" y1="175" x2="190" y2="215" stroke="#c62828" stroke-width="2"/>
+  <rect x="182" y="178" width="16" height="30" fill="#c62828"/>
+  <line x1="245" y1="205" x2="245" y2="235" stroke="#c62828" stroke-width="2"/>
+  <rect x="237" y="208" width="16" height="20" fill="#c62828"/>
+  <line x1="310" y1="212" x2="310" y2="272" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="302" y="212" width="16" height="14" fill="#2e7d32"/>
+  <text x="202" y="270" text-anchor="middle" font-size="12" fill="#555">Small body up top, long lower wick</text>
+  <rect x="425" y="55" width="345" height="230" rx="8" fill="#f9f7f7" stroke="#e3dddd"/>
+  <text x="597" y="80" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">Hanging Man, after an uptrend</text>
+  <line x1="450" y1="250" x2="745" y2="250" stroke="#cccccc" stroke-width="1"/>
+  <line x1="475" y1="235" x2="475" y2="228" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="467" y="220" width="16" height="20" fill="#2e7d32"/>
+  <line x1="530" y1="205" x2="530" y2="198" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="522" y="185" width="16" height="25" fill="#2e7d32"/>
+  <line x1="585" y1="175" x2="585" y2="168" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="577" y="150" width="16" height="30" fill="#2e7d32"/>
+  <line x1="640" y1="145" x2="640" y2="138" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="632" y="115" width="16" height="35" fill="#2e7d32"/>
+  <line x1="705" y1="112" x2="705" y2="172" stroke="#c62828" stroke-width="2"/>
+  <rect x="697" y="112" width="16" height="14" fill="#c62828"/>
+  <text x="597" y="270" text-anchor="middle" font-size="12" fill="#555">Same shape as a hammer, but at the top of an uptrend</text>
+  <text x="400" y="330" text-anchor="middle" font-size="22" font-weight="800" fill="#152238">The 4 patterns you actually need to know</text>
+  <rect x="30" y="350" width="740" height="40" fill="#efefef"/>
+  <text x="130" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Pattern</text>
+  <text x="400" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Shape</text>
+  <text x="650" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Market signal</text>
+  <rect x="30" y="390" width="740" height="90" fill="#ffffff" stroke="#eeeeee"/>
+  <text x="130" y="440" text-anchor="middle" font-size="14" fill="#222">Doji</text>
+  <line x1="400" y1="405" x2="400" y2="465" stroke="#888888" stroke-width="2"/>
+  <line x1="388" y1="435" x2="412" y2="435" stroke="#888888" stroke-width="3"/>
+  <text x="650" y="440" text-anchor="middle" font-size="13" fill="#444">Indecision; neither side has the upper hand</text>
+  <rect x="30" y="480" width="740" height="90" fill="#fafafa" stroke="#eeeeee"/>
+  <text x="130" y="530" text-anchor="middle" font-size="14" fill="#222">Hammer</text>
+  <line x1="400" y1="495" x2="400" y2="560" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="392" y="498" width="16" height="16" fill="#2e7d32"/>
+  <text x="650" y="530" text-anchor="middle" font-size="13" fill="#444">After a drop, a possible bullish reversal</text>
+  <rect x="30" y="570" width="740" height="90" fill="#ffffff" stroke="#eeeeee"/>
+  <text x="130" y="620" text-anchor="middle" font-size="14" fill="#222">Hanging Man</text>
+  <line x1="400" y1="585" x2="400" y2="650" stroke="#c62828" stroke-width="2"/>
+  <rect x="392" y="588" width="16" height="16" fill="#c62828"/>
+  <text x="650" y="620" text-anchor="middle" font-size="13" fill="#444">After a rise, a warning that buyers are weakening</text>
+  <rect x="30" y="660" width="740" height="90" fill="#fafafa" stroke="#eeeeee"/>
+  <text x="130" y="710" text-anchor="middle" font-size="14" fill="#222">Engulfing</text>
+  <rect x="380" y="700" width="14" height="20" fill="#c62828"/>
+  <rect x="398" y="685" width="20" height="40" fill="#2e7d32"/>
+  <text x="650" y="710" text-anchor="middle" font-size="13" fill="#444">A clear shift in power between buyers and sellers</text>
+</svg>
+<div class="grid"><article class="card"><span class="num">01</span><h3>Doji</h3><p>The open and close prices are almost identical. It shows buyers and sellers were undecided in that period, with neither side gaining the upper hand.</p></article><article class="card"><span class="num">02</span><h3>Hammer</h3><p>Usually appears at the end of a downtrend. It has a small body near the top and a long lower wick. Sellers pushed the price down first, but buyers pulled it back up; that's why it can signal a bullish reversal.</p></article><article class="card"><span class="num">03</span><h3>Hanging Man</h3><p>Shape-wise, it's identical to a Hammer; same small body up top, same long lower wick. The only difference is where it shows up: this one appears in an uptrend, warning that buying power may be weakening.</p></article><article class="card"><span class="num">04</span><h3>Engulfing</h3><p>A two-candle pattern. In the bullish version, a large green candle completely covers the body of the previous red candle (usually after a downtrend). The bearish version is the reverse.</p></article></div>
+<div class="callout"><strong>Why these 4 are enough:</strong> these four patterns represent the four core market behaviors: indecision (Doji), a bullish reversal (Hammer), a warning sign after a rise (Hanging Man), and a clear power shift (Engulfing). Learning just these four makes a large part of price behavior readable to you. Later, whenever you're ready, you can move on to more patterns; but for starting out, memorizing dozens of them is neither necessary nor realistic.</div><div class="callout">One important note: being enough <em>to start with</em> doesn't mean they're enough on their own for a final decision. Most sources agree that these patterns need to be read alongside the prior trend, support and resistance, and a confirming candle; not in isolation.</div>
+<h2>One candle alone isn't a signal</h2><ul class="concepts"><li>Uptrend: when price gradually climbs, making higher highs and higher lows each time.</li><li>Downtrend: the opposite; lower highs and lower lows each time.</li><li>Consolidation: when price stays within a defined range for a while, without a clear direction.</li><li>Support: a level where price tends to bounce back up when it gets there; think of it as a floor.</li><li>Resistance: a level where price tends to turn back down when it gets there; think of it as a ceiling.</li></ul><p style="margin-top:18px">According to <a href="https://www.babypips.com/learn/forex/elementary" target="_blank" rel="noopener">BabyPips</a>, one of the well-known educational resources for trading, a candlestick pattern only really means something when it's read alongside these concepts (trend, support, resistance), not on its own.</p>
+<h2>The pre-trust checklist</h2><p>Go through these four, in order, not all at once.</p><div class="checklist"><div class="check-item"><span class="check-num">1</span><div><h3>What timeframe are you looking at?</h3><p>A pattern on a short timeframe (like 1 minute) carries more noise and false signals. On longer timeframes (like daily), it's usually more reliable.</p></div></div><div class="check-item"><span class="check-num">2</span><div><h3>Did you spot this pattern yourself, or did someone tell you about it?</h3><p>If someone told you to "buy now" or "sell now," that's exactly what this guide wants to steer you away from. Not every signal deserves your trust; the goal is understanding why, not just being told when.</p></div></div><div class="check-item"><span class="check-num">3</span><div><h3>Does it line up with the overall market trend?</h3><p>A hammer in the middle of a strong uptrend means a lot less than a hammer at the end of a long downtrend. Always read a pattern against the broader trend, not in isolation.</p></div></div><div class="check-item"><span class="check-num">4</span><div><h3>How much could you lose if you're wrong?</h3><p>This is where you need to pay more attention than anywhere else. Taking risk is fine, but it has to be calculated; not like someone who walks into the market with a hundred million tomans without thinking it through, loses more than half of it in seconds, and ends up with only twenty million left.</p></div></div></div>
+<div class="callout">I ask myself these questions before every trade; they're a small nudge that sometimes keeps me from falling into the trap.</div>
+<h2>Your next practical step</h2><p>Before you start with real money, try these two things:</p><ol class="steps"><li>First, get used to working with longer timeframes (like daily or 4-hour) instead of 1-minute charts; patterns are more reliable to read there.</li><li>Second, before trading with real money on Nobitex or Tabdeal, spend a few days on a free charting tool (like TradingView) just practicing recognizing candles and spotting trends, with no risk of losing real money.</li></ol>
+<h2>Frequently asked questions</h2><details><summary>What does a red or green candle mean?</summary><p>Green means the price went up over that period (closed higher than it opened). Red means the price went down (closed lower than it opened).</p></details><details><summary>Does candlestick reading work the same way in crypto as in stocks?</summary><p>The basic concept is the same, but the crypto market runs 24 hours a day with no daily price-move limits, so trends can form faster and more sharply.</p></details><details><summary>How many patterns do I actually need to know?</summary><p>To start, these 4 (Doji, Hammer, Hanging Man, Engulfing) are enough. You can learn more later.</p></details><details><summary>Can you trade using candlesticks alone?</summary><p>No. Candlestick reading is a tool, not a complete system. It needs to be combined with trend analysis, support/resistance, and risk management.</p></details>
+<h2>Final takeaway</h2><p>Candlestick reading is a way to understand what the market is doing; not a way to get a signal. To learn about risk management and protecting your capital, follow part 3 of this series.</p>
+<div class="disclaimer"><em>This page is for educational purposes only and does not constitute financial advice. Cryptocurrency trading involves substantial risk, and you are responsible for your own financial decisions.</em></div>
+</div></div></main>
+<footer><div class="foot"><div><strong>SILKWORDS</strong><br><small>Content Writing &amp; Copywriting</small></div><small>Educational Web Content · Sample 02</small></div></footer>
+</body></html>
